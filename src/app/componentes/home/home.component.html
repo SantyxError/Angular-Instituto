@@ -1,0 +1,40 @@
+<h3 style="padding: 20px">{{ titulo }}</h3>
+
+<div>
+  <ul>
+    <li *ngFor="let alumno of alumnos" style="margin-bottom: 20px">
+      {{ alumno.id }} - {{ alumno.nombre }} {{ alumno.apellido }} |
+      {{ alumno.curso }}
+
+      <button
+        class="btn btn-info"
+        style="margin-right: 20px; margin-left: 20px"
+        routerLink="/alumnos/info/{{ alumno.id }}"
+      >
+        info
+      </button>
+      <button
+        class="btn btn-danger"
+        style="margin-right: 20px"
+        routerLink="/alumnos/eliminar/{{ alumno.id }}"
+      >
+        Borrar
+      </button>
+      <button
+        class="btn btn-warning"
+        style="margin-right: 20px"
+        routerLink="/alumnos/actualizar/{{ alumno.id }}"
+      >
+        Actualizar
+      </button>
+    </li>
+  </ul>
+</div>
+
+<button
+  routerLink="/alumnos/nuevo"
+  class="btn btn-primary"
+  style="margin-top: 40px; margin-left: 20px"
+>
+  Crear nuevo Alumno
+</button>

@@ -1,0 +1,43 @@
+<div style="padding: 20px">
+  <h3>{{ titulo }}</h3>
+
+  <form (submit)="actualizarAlumno()">
+    <label for="">Id:</label> <br />
+    <input
+      type="text"
+      id="id"
+      name="id"
+      value="{{ id }}"
+      disabled
+    /><br /><br />
+
+    <label for="">Nombre:</label> <br />
+    <input
+      type="text"
+      name="nombre"
+      [(ngModel)]="alumno.nombre"
+      placeholder="{{ alumno.nombre }}"
+    /><br /><br />
+
+    <label for="">Apellido:</label> <br />
+    <input
+      type="text"
+      name="apellido"
+      [(ngModel)]="alumno.apellido"
+      placeholder="{{ alumno.apellido }}"
+    /><br /><br />
+
+    <label for="">Curso:</label> <br />
+    <input
+      type="text"
+      name="curso"
+      [(ngModel)]="alumno.curso"
+      placeholder="{{ alumno.curso }}"
+    /><br /><br />
+
+    <button type="submit" class="btn btn-success">Actualizar Alumno</button>
+  </form>
+
+  <br />
+  <button class="btn btn-primary" routerLink="">Volver</button>
+</div>

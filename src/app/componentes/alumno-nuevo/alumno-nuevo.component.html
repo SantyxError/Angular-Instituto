@@ -1,0 +1,28 @@
+<div style="padding: 20px">
+  <h3>{{ titulo }}</h3>
+
+  <form (submit)="nuevoAlumno()">
+    <label for="">Id:</label> <br />
+    <input
+      type="text"
+      id="id"
+      name="id"
+      value="{{ id }}"
+      disabled
+    /><br /><br />
+
+    <label for="">Nombre:</label> <br />
+    <input type="text" name="nombre" [(ngModel)]="nombre" /><br /><br />
+
+    <label for="">Apellido:</label> <br />
+    <input type="text" name="apellido" [(ngModel)]="apellido" /><br /><br />
+
+    <label for="">Curso:</label> <br />
+    <input type="text" name="curso" [(ngModel)]="curso" /><br /><br />
+
+    <button type="submit" class="btn btn-success">Crear nuevo Alumno</button>
+  </form>
+
+  <br />
+  <button class="btn btn-primary" routerLink="">Volver</button>
+</div>
