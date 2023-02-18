@@ -1,1 +1,43 @@
-<p>profesor-actualizar works!</p>
+<div style="padding: 20px">
+  <h3>{{ titulo }}</h3>
+
+  <form (submit)="actualizarProfesor()">
+    <label for="">Id:</label> <br />
+    <input
+      type="text"
+      id="id"
+      name="id"
+      value="{{ id }}"
+      disabled
+    /><br /><br />
+
+    <label for="">Nombre:</label> <br />
+    <input
+      type="text"
+      name="nombre"
+      [(ngModel)]="profesor.nombre"
+      placeholder="{{ profesor.nombre }}"
+    /><br /><br />
+
+    <label for="">Apellido:</label> <br />
+    <input
+      type="text"
+      name="apellido"
+      [(ngModel)]="profesor.apellido"
+      placeholder="{{ profesor.apellido }}"
+    /><br /><br />
+
+    <label for="">Asignatura:</label> <br />
+    <input
+      type="text"
+      name="curso"
+      [(ngModel)]="profesor.asignatura"
+      placeholder="{{ profesor.asignatura }}"
+    /><br /><br />
+
+    <button type="submit" class="btn btn-success">Actualizar Profesor</button>
+  </form>
+
+  <br />
+  <button class="btn btn-primary" routerLink="">Volver</button>
+</div>
