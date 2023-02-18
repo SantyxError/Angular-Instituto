@@ -1,1 +1,39 @@
-<p>clases works!</p>
+<h3 style="padding: 20px">{{ titulo }}</h3>
+
+<div>
+  <ul>
+    <li *ngFor="let asignatura of asignaturas" style="margin-bottom: 20px">
+      {{ asignatura.id }} - {{ asignatura.nombre }}
+
+      <button
+        class="btn btn-info"
+        style="margin-right: 20px; margin-left: 20px"
+        routerLink="/clases/info/{{ asignatura.id }}"
+      >
+        info
+      </button>
+      <button
+        class="btn btn-danger"
+        style="margin-right: 20px"
+        routerLink="/clases/eliminar/{{ asignatura.id }}"
+      >
+        Borrar
+      </button>
+      <button
+        class="btn btn-warning"
+        style="margin-right: 20px"
+        routerLink="/clases/actualizar/{{ asignatura.id }}"
+      >
+        Actualizar
+      </button>
+    </li>
+  </ul>
+</div>
+
+<button
+  routerLink="/clases/nuevo"
+  class="btn btn-primary"
+  style="margin-top: 40px; margin-left: 20px"
+>
+  Crear nueva Asignatura
+</button>

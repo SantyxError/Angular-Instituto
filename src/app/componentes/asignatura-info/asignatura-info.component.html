@@ -1,0 +1,25 @@
+<div style="padding: 20px">
+  <h3>{{ titulo }}</h3>
+
+  <form>
+    <label for="">Id:</label> <br />
+    <input
+      type="text"
+      id="id"
+      name="id"
+      value="{{ asignatura.id }}"
+      readonly
+    /><br /><br />
+
+    <label for="">Nombre:</label> <br />
+    <input
+      type="text"
+      name="nombre"
+      value="{{ asignatura.nombre }}"
+      readonly
+    /><br /><br />
+  </form>
+
+  <br />
+  <button class="btn btn-primary" routerLink="/clases/">Volver</button>
+</div>

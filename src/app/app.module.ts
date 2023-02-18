@@ -15,6 +15,10 @@ import { ProfesorActualizarComponent } from './componentes/profesor-actualizar/p
 import { ProfesorBorrarComponent } from './componentes/profesor-borrar/profesor-borrar.component';
 import { ProfesorInfoComponent } from './componentes/profesor-info/profesor-info.component';
 import { ProfesorNuevoComponent } from './componentes/profesor-nuevo/profesor-nuevo.component';
+import { AsignaturaNuevoComponent } from './componentes/asignatura-nuevo/asignatura-nuevo.component';
+import { AsignaturaBorrarComponent } from './componentes/asignatura-borrar/asignatura-borrar.component';
+import { AsignaturaActualizarComponent } from './componentes/asignatura-actualizar/asignatura-actualizar.component';
+import { AsignaturaInfoComponent } from './componentes/asignatura-info/asignatura-info.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +34,10 @@ import { ProfesorNuevoComponent } from './componentes/profesor-nuevo/profesor-nu
     ProfesorBorrarComponent,
     ProfesorInfoComponent,
     ProfesorNuevoComponent,
+    AsignaturaNuevoComponent,
+    AsignaturaBorrarComponent,
+    AsignaturaActualizarComponent,
+    AsignaturaInfoComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
