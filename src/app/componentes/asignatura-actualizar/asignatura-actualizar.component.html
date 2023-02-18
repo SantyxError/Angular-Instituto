@@ -1,1 +1,28 @@
-<p>asignatura-actualizar works!</p>
+<div style="padding: 20px">
+  <h3>{{ titulo }}</h3>
+
+  <form (submit)="actualizarAsignatura()">
+    <label for="">Id:</label> <br />
+    <input
+      type="text"
+      id="id"
+      name="id"
+      value="{{ id }}"
+      disabled
+    /><br /><br />
+
+    <label for="">Nombre:</label> <br />
+    <input
+      type="text"
+      name="nombre"
+      id="nombre"
+      [(ngModel)]="asignatura.nombre"
+      placeholder="{{ asignatura.nombre }}"
+    /><br /><br />
+
+    <button type="submit" class="btn btn-success">Actualizar Asignatura</button>
+  </form>
+
+  <br />
+  <button class="btn btn-primary" routerLink="/clases">Volver</button>
+</div>

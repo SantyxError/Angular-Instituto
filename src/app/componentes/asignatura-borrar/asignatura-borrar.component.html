@@ -1,1 +1,19 @@
-<p>asignatura-borrar works!</p>
+<div style="padding: 20px">
+  <h3>{{ titulo }}</h3>
+
+  <br /><br />
+
+  <h4>¿Desea borrar la asignatura de {{ asignatura.nombre }}?</h4>
+
+  <br /><br />
+  <button
+    class="btn btn-danger"
+    routerLink="/profesores"
+    (click)="eliminarAsignatura()"
+  >
+    Borrar
+  </button>
+
+  <br />
+  <button class="btn btn-primary" routerLink="/clases">Volver</button>
+</div>
