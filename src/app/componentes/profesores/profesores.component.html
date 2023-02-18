@@ -1,1 +1,42 @@
-<p>profesores works!</p>
+<h3 style="padding: 20px">{{ titulo }}</h3>
+
+<div>
+  <ul>
+    <li *ngFor="let profesor of profesores" style="margin-bottom: 20px">
+      {{ profesor.id }} - {{ profesor.nombre }} {{ profesor.apellido }} |
+      <b> {{ profesor.asignatura }} </b>
+
+      <button
+        class="btn btn-info"
+        style="margin-right: 20px; margin-left: 20px"
+        routerLink="/profesores/info/{{ profesor.id }}"
+      >
+        Info
+      </button>
+
+      <button
+        class="btn btn-danger"
+        style="margin-right: 20px; margin-left: 20px"
+        routerLink="/profesores/eliminar/{{ profesor.id }}"
+      >
+        Eliminar
+      </button>
+
+      <button
+        class="btn btn-warning"
+        style="margin-right: 20px; margin-left: 20px"
+        routerLink="/profesores/actualizar/{{ profesor.id }}"
+      >
+        Actualizar
+      </button>
+    </li>
+  </ul>
+</div>
+
+<button
+  routerLink="/profesores/nuevo"
+  class="btn btn-primary"
+  style="margin-top: 40px; margin-left: 20px"
+>
+  Crear nuevo Profesor
+</button>

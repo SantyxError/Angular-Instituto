@@ -11,6 +11,10 @@ import { AlumnoBorrarComponent } from './componentes/alumno-borrar/alumno-borrar
 import { AlumnoActualizarComponent } from './componentes/alumno-actualizar/alumno-actualizar.component';
 import { AlumnoNuevoComponent } from './componentes/alumno-nuevo/alumno-nuevo.component';
 import { FormsModule } from '@angular/forms';
+import { ProfesorActualizarComponent } from './componentes/profesor-actualizar/profesor-actualizar.component';
+import { ProfesorBorrarComponent } from './componentes/profesor-borrar/profesor-borrar.component';
+import { ProfesorInfoComponent } from './componentes/profesor-info/profesor-info.component';
+import { ProfesorNuevoComponent } from './componentes/profesor-nuevo/profesor-nuevo.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +26,10 @@ import { FormsModule } from '@angular/forms';
     AlumnoBorrarComponent,
     AlumnoActualizarComponent,
     AlumnoNuevoComponent,
+    ProfesorActualizarComponent,
+    ProfesorBorrarComponent,
+    ProfesorInfoComponent,
+    ProfesorNuevoComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

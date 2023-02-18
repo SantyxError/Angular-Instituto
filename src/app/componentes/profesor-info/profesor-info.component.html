@@ -1,0 +1,41 @@
+<div style="padding: 20px">
+  <h3>{{ titulo }}</h3>
+
+  <form>
+    <label for="">Id:</label> <br />
+    <input
+      type="text"
+      id="id"
+      name="id"
+      value="{{ profesor.id }}"
+      readonly
+    /><br /><br />
+
+    <label for="">Nombre:</label> <br />
+    <input
+      type="text"
+      name="nombre"
+      value="{{ profesor.nombre }}"
+      readonly
+    /><br /><br />
+
+    <label for="">Apellido:</label> <br />
+    <input
+      type="text"
+      name="apellido"
+      value="{{ profesor.apellido }}"
+      readonly
+    /><br /><br />
+
+    <label for="">Curso:</label> <br />
+    <input
+      type="text"
+      name="curso"
+      value="{{ profesor.asignatura }}"
+      readonly
+    /><br /><br />
+  </form>
+
+  <br />
+  <button class="btn btn-primary" routerLink="/profesores/">Volver</button>
+</div>
