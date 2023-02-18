@@ -15,6 +15,7 @@ import { ProfesorBorrarComponent } from './componentes/profesor-borrar/profesor-
 import { ProfesorInfoComponent } from './componentes/profesor-info/profesor-info.component';
 import { ProfesorNuevoComponent } from './componentes/profesor-nuevo/profesor-nuevo.component';
 import { ProfesoresComponent } from './componentes/profesores/profesores.component';
+import { Guarda1Guard } from './Guards/guarda1.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -23,7 +24,7 @@ const routes: Routes = [
   { path: 'profesores/eliminar/:id', component: ProfesorBorrarComponent },
   { path: 'profesores/actualizar/:id', component: ProfesorActualizarComponent },
   { path: 'profesores/nuevo', component: ProfesorNuevoComponent },
-  { path: 'clases', component: ClasesComponent },
+  { path: 'clases', canActivate: [Guarda1Guard], component: ClasesComponent },
   { path: 'clases/nuevo', component: AsignaturaNuevoComponent },
   { path: 'clases/info/:id', component: AsignaturaInfoComponent },
   { path: 'clases/eliminar/:id', component: AsignaturaBorrarComponent },
