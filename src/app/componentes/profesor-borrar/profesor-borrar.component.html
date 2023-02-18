@@ -1,1 +1,21 @@
-<p>profesor-borrar works!</p>
+<div style="padding: 20px">
+  <h3>{{ titulo }}</h3>
+
+  <br /><br />
+
+  <h4>
+    ¿Desea borrar al profesor {{ profesor.nombre }} {{ profesor.apellido }}?
+  </h4>
+
+  <br /><br />
+  <button
+    class="btn btn-danger"
+    routerLink="/profesores"
+    (click)="eliminarProfesor()"
+  >
+    Borrar
+  </button>
+
+  <br />
+  <button class="btn btn-primary" routerLink="/profesores">Volver</button>
+</div>
