@@ -1,0 +1,14 @@
+<h3>LOGIN</h3>
+<form name="formulario">
+  <!-- id <input type="text" name="id" #id> -->
+  usuario <input type="text" name="login" [(ngModel)]="usuario.login" />
+  <br />
+  <br />
+  <!-- nombre <input type="text" name="nombre" #nombre /> -->
+  contraseña
+  <input type="text" name="password" [(ngModel)]="usuario.password" />
+  <br />
+  <br />
+  <button routerLink="/" (click)="botonLogin()">Login</button>
+  <button routerLink="/">Cancelar</button>
+</form>

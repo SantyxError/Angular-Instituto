@@ -19,6 +19,7 @@ import { AsignaturaNuevoComponent } from './componentes/asignatura-nuevo/asignat
 import { AsignaturaBorrarComponent } from './componentes/asignatura-borrar/asignatura-borrar.component';
 import { AsignaturaActualizarComponent } from './componentes/asignatura-actualizar/asignatura-actualizar.component';
 import { AsignaturaInfoComponent } from './componentes/asignatura-info/asignatura-info.component';
+import { LoginComponent } from './componentes/login/login.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { AsignaturaInfoComponent } from './componentes/asignatura-info/asignatur
     AsignaturaBorrarComponent,
     AsignaturaActualizarComponent,
     AsignaturaInfoComponent,
+    LoginComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

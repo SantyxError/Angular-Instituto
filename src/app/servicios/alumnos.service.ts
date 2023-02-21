@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Alumno } from '../modelos/alumno';
+import { Usuario } from '../modelos/usuario';
 
 @Injectable({
   providedIn: 'root',
@@ -12,6 +13,9 @@ export class AlumnosService {
     { id: 4, nombre: 'Pablo', apellido: 'Benitez', curso: '2ºDAW' },
     { id: 5, nombre: 'Andrés', apellido: 'Gascón', curso: '2ºDAW' },
   ];
+
+  //este login es un numero, entra o no entra.
+  private login: number = 0;
 
   constructor() {}
 
@@ -40,5 +44,21 @@ export class AlumnosService {
   eliminaAlumno(id: number) {
     let pos = this.alumnos.findIndex((a) => a.id == id);
     this.alumnos.splice(pos, 1);
+  }
+
+  //Devuelve el login
+  getLogin() {
+    return this.login;
+  }
+
+  //Establecemos el login, al cual le pasamos un usuario
+  setLogin(usuario: Usuario) {
+    console.log(usuario.password);
+    //si NO coinciden con el usuario, no entra
+    if (usuario.password != '' && usuario.login != '') {
+      this.login = 1; //no entra
+    } else {
+      this.login = 0; //entra
+    }
   }
 }

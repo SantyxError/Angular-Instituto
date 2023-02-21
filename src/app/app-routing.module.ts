@@ -10,15 +10,17 @@ import { AsignaturaInfoComponent } from './componentes/asignatura-info/asignatur
 import { AsignaturaNuevoComponent } from './componentes/asignatura-nuevo/asignatura-nuevo.component';
 import { ClasesComponent } from './componentes/clases/clases.component';
 import { HomeComponent } from './componentes/home/home.component';
+import { LoginComponent } from './componentes/login/login.component';
 import { ProfesorActualizarComponent } from './componentes/profesor-actualizar/profesor-actualizar.component';
 import { ProfesorBorrarComponent } from './componentes/profesor-borrar/profesor-borrar.component';
 import { ProfesorInfoComponent } from './componentes/profesor-info/profesor-info.component';
 import { ProfesorNuevoComponent } from './componentes/profesor-nuevo/profesor-nuevo.component';
 import { ProfesoresComponent } from './componentes/profesores/profesores.component';
 import { Guarda1Guard } from './Guards/guarda1.guard';
+import { Guarda2Guard } from './Guards/guarda2.guard';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', canActivate: [Guarda2Guard], component: HomeComponent },
   { path: 'profesores', component: ProfesoresComponent },
   { path: 'profesores/info/:id', component: ProfesorInfoComponent },
   { path: 'profesores/eliminar/:id', component: ProfesorBorrarComponent },
@@ -33,6 +35,7 @@ const routes: Routes = [
   { path: 'alumnos/eliminar/:id', component: AlumnoBorrarComponent },
   { path: 'alumnos/actualizar/:id', component: AlumnoActualizarComponent },
   { path: 'alumnos/nuevo', component: AlumnoNuevoComponent },
+  { path: 'login', component: LoginComponent },
 ];
 
 @NgModule({
